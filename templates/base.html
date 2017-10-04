@@ -1,0 +1,13 @@
+    <!DOCtYPE html>
+    <html>
+    <li class="nav navbar-nav">
+      {% if user.is_active %}
+      <ul><a href="{% url 'login' %}"> <span class="glyphicon glyphicon-heart"></span>{{user.username}}</a></ul>
+      <ul><a href="{% url 'club' %}"> <span class="glyphicon glyphicon-heart"></span>Club List</a></ul>
+      {% else %}
+      <ul><a href="{%url 'login' %}"> <span class="glyphicon glyphicon-user"></span>Login</a></ul>
+      {% endif %}
+    </li>
+    {% block content %}
+    {% endblock %}
+    </html>

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if user.is_active %}
+{% for club in clist %}
+    <h1><a href="">{{club.club_name}}</a></h1>
+    <h2>{{club.description}}</h2>
+{% endfor %}
+{% endif %}
+{% endblock %}
